@@ -1,0 +1,44 @@
+{
+  "name": "virtual-webcomponent",
+  "version": "1.0.0",
+  "description": "Render a custom element to a virtual-dom widget",
+  "main": "index.js",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "test": "standard && npm run deps && NODE_ENV=test node test",
+    "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test.js"
+  },
+  "repository": "yoshuawuyts/virtual-webcomponent",
+  "keywords": [
+    "virtual",
+    "dom",
+    "custom elements",
+    "webcomponent",
+    "custom",
+    "element",
+    "render",
+    "vdom",
+    "html",
+    "render",
+    "server",
+    "compile",
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "virtual-widget": "^1.1.2"
+  },
+  "devDependencies": {
+    "dependency-check": "^2.5.1",
+    "istanbul": "^0.4.1",
+    "min-document": "^2.17.0",
+    "standard": "^5.4.1",
+    "tape": "^4.4.0",
+    "vdom-to-html": "^2.2.0",
+    "virtual-dom": "^2.1.1"
+  },
+  "files": [
+    "index.js",
+    "bin/*"
+  ]
+}

@@ -2,6 +2,10 @@
 [![npm version][2]][3] [![build status][4]][5] [![test coverage][6]][7]
 [![downloads][8]][9] [![js-standard-style][10]][11]
 
+This is a very bad idea. Rendering `custom elements` on the server has proven
+to be either fragile, slow or clunky so they should be avoided. Don't use this.
+You have been warned.
+
 Render a [custom element][16] to a [virtual-dom widget][17].
 
 ## Installation

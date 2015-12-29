@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "dependency-check": "^2.5.1",
+    "global": "^4.3.0",
     "istanbul": "^0.4.1",
     "min-document": "^2.17.0",
     "standard": "^5.4.1",

@@ -1,6 +1,7 @@
-const DOMElement = require('min-document/dom-element')
+const document = require('min-document')
 const toHtml = require('vdom-to-html')
 const h = require('virtual-dom/h')
+const global = require('global')
 const test = require('tape')
 
 const toWidget = require('./')
@@ -12,9 +13,15 @@ test('should assert input types', function (t) {
 
 test('should transform a custom element to a vdom widget', function (t) {
   t.plan(1)
-  const proto = Object.create(DOMElement.prototype)
+
+  const proto = global.window
+    ? Object.create(global.window.HTMLElement)
+    : document.createElement('div')
+
+  // console.log('proto', proto)
+
   proto.createdCallback = function () {
-    this.innerHtml = 'hello cruel world'
+    this.innerHTML = 'hello cruel world'
   }
 
   const widget = toWidget(proto)

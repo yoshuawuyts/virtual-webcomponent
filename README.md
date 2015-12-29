@@ -4,7 +4,7 @@
 
 This is a very bad idea. Rendering `custom elements` on the server has proven
 to be either fragile, slow or clunky so they should be avoided. Don't use this.
-You have been warned.
+You have been warned. This has been open sourced for legacy purposes only.
 
 Render a [custom element][16] to a [virtual-dom widget][17].
 

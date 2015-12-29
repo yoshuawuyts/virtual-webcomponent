@@ -12,9 +12,9 @@ function toWidget (proto) {
 
   const mappings = {}
   if (proto.attachedCallback) mappings.init = proto.attachedCallback
-  if (proto.detachedCallback) mappings.init = proto.detachedCallback
+  if (proto.detachedCallback) mappings.destroy = proto.detachedCallback
   if (proto.attributeChangedCallback) {
-    mappings.init = proto.attributeChangedCallback
+    mappings.update = proto.attributeChangedCallback
   }
 
   return virtualWidget(mappings)
